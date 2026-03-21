@@ -3,7 +3,6 @@ import { ExternalLinkIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 
-
 const certi =[
     {
         id: 1,
@@ -14,69 +13,90 @@ const certi =[
         category: "Cloud"
     }, {
         id: 2,
+        title: "MySQL Bootcamp",
+        description: "Comprehensive introduction to MySQL, covering SQL fundamentals, data analysis, joins, and real-world querying to extract insights from data.",
+        Image: "../images/certifications/Mar2026-Udemy-MySQL_Bootcamp.png",
+        demoUrl: "https://ude.my/UC-822c8861-5f5c-4a97-b4ed-40a792f04729",
+        category: "SQL"
+    }, {
+        id: 3,
+        title: "SQL (Basic) Certification",
+        description: "Foundational knowledge of SQL, including querying, data filtering, joins, and basic data manipulation.",
+        Image: "../images/certifications/Mar2026-HackerRank-SQLBasicCertification.png",
+        demoUrl: "https://www.hackerrank.com/certificates/iframe/7325ca564bd5",
+        category: "SQL"
+    }, {
+        id: 4,
+        title: "Advanced English Communication Certification (B2+)",
+        description: "Certification verifying B2+ (Upper-Intermediate) English proficiency, with demonstrated strengths in listening (C1) and solid performance across reading, speaking, and overall communication skills. Valid through March 2027.",
+        Image: "../images/certifications/Mar2026-BELT-IdiomaInternacional(English).png",
+        demoUrl: "https://belt.idiomacr.com/#/certificate_verification/480309cc084c1992",
+        category: "English"
+    }, {
+        id: 5,
+        title: "ETC Certificate – CEFR C1 (Advanced English)",
+        description: "Awarded by ETC International College, this certificate validates advanced English proficiency at the CEFR C1 level.",
+        Image: "../images/certifications/ETCInternationalCollege.png",
+        demoUrl: null,
+        category: "English"
+    },{
+        id: 6,
         title: "Cloud Computing Fundamentals",
         description: "Solid understanding of core cloud concepts, service models, deployment models, virtualization, and the foundational principles behind modern cloud architectures.",
         Image: "../images/certifications/IBMCCF.png",
         demoUrl: "https://www.credly.com/badges/3af70445-30b7-47af-ae34-83279959a2f8/public_url",
         category: "Cloud"
     }, {
-        id: 3,
-        title: "ETC Certificate – CEFR C1 (Advanced English)",
-        description: "Awarded by ETC International College, this certificate validates advanced English proficiency at the CEFR C1 level.",
-        Image: "../images/certifications/ETCInternationalCollege.png",
-        demoUrl: null,
-        category: "English"
-    }, {
-        id: 4,
-        title: "Job Roles in the Cloud",
-        description: "Cloud career paths, responsibilities across cloud engineering, operations, security, architecture, and the essential skills required to work effectively in cloud environments.",
-        Image: "../images/certifications/JobRoles.png",
-        demoUrl: null,
-        category: "Cloud"
-    }, {
-        id: 5,
+        id: 7,
         title: "Amazon CloudWatch",
         description: "Foundational knowledge in monitoring AWS resources, creating dashboards, setting alarms, and analyzing logs and metrics to improve application observability and performance.",
         Image: "../images/certifications/CloudWatch.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 6,
+        id: 8,
+        title: "Job Roles in the Cloud",
+        description: "Cloud career paths, responsibilities across cloud engineering, operations, security, architecture, and the essential skills required to work effectively in cloud environments.",
+        Image: "../images/certifications/JobRoles.png",
+        demoUrl: null,
+        category: "Cloud"
+    }, {
+        id: 9,
         title: "AWS Certified Cloud Practitioner Domain 1 Practice",
         description: "Practical understanding of AWS core concepts, including the AWS global infrastructure, the Shared Responsibility Model, basic cloud economics, high availability and fault tolerance principles.",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-Domain1Practice.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 6,
+        id: 10,
         title: "AWS Cloud Practitioner – Security & Compliance Review",
         description: "Practical knowledge of AWS security fundamentals, Identity and Access Management (IAM) policies and roles, the Shared Responsibility Model, data protection mechanisms, AWS compliance programs and core security services such as IAM, AWS Shield and AWS CloudTrail.",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-Domain2Review.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 7,
+        id: 11,
         title: "AWS Cloud Practitioner – Cloud Technology & Services Practice",
         description: "Practical knowledge of AWS core services, including compute, storage, networking, databases, and security services. Understanding of service configurations and best practices for deploying scalable and secure applications in AWS.",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-Domain3Practice.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 8,
+        id: 12,
         title: "AWS Cloud Practitioner – Core AWS Services Review",
         description: "This review reinforces practical knowledge of core AWS services, including compute (Amazon EC2, AWS Lambda), storage (Amazon S3, EBS), databases (Amazon RDS, DynamoDB), and networking (Amazon VPC).",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-Domain3Review.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 9,
+        id: 13,
         title: "AWS Cloud Practitioner – Exam Preparation Overview",
         description: "This training consolidates knowledge across all exam domains, including cloud concepts, security and compliance, core AWS services, billing, and pricing models.",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-ExamPrepOverview.png",
         demoUrl: null,
         category: "Cloud"
     }, {
-        id: 10,
+        id: 14,
         title: "AWS Cloud Practitioner – Exam Preparation Plan Overview",
         description: "This module outlines a structured study strategy covering all exam domains, including cloud concepts, security and compliance, core AWS services, and billing and pricing.",
         Image: "../images/certifications/Feb2026-AWS-CloudPractioner-ExamPrepPlanOverview.png",
@@ -85,11 +105,11 @@ const certi =[
     }
 ];
 
-const categories = ["all", "Cloud", "English"];
+const categories = ["All", "☁️ Cloud", "🌍 English", "🗄️ SQL"];
 
 export const CertiSection = () => {
-    const [activeCategory, setActiveCategory] = useState("all");
-    const filteredSkills = certi.filter((certi) => activeCategory === "all" || certi.category === activeCategory);
+    const [activeCategory, setActiveCategory] = useState("All");
+    const filteredSkills = certi.filter((certi) => activeCategory === "All" || certi.category === activeCategory);
 
     return <section id="certis" className="py-24 px-4 relative">
 
